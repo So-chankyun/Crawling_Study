@@ -41,7 +41,8 @@ for show in ticker:
     try:
         info = pdr.get_data_yahoo(show,start_date,end_date)
     except: # yahooDailyReader에 해당 회사의 데이터가 없는 경우 예외 발생
-        print(show+" : No Data in YahooDailyReader\n")
+        print(company+" : No Data in YahooDailyReader\n")
+        continue;
     name = code_df[code_df['Symbol'] == show]['Name'].to_string(index=False)
     print("Company Name : "+name)
     print("Company Ticker : "+show)
