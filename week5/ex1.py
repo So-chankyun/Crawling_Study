@@ -6,7 +6,7 @@ db.drop_table('fruits')
 table = db.table('fruits') # 테이블 생성
 
 # tuple 삽입
-table.insert({'name':'사과','price':5000})
+table.insert({'name':'사과','price':5000,'지역 이름':'인천'})
 table.insert({'name':'바나나','price':7000})
 table.insert({'name':'망고','price':8000})
 table.insert({'name':'레몬','price':5500})
